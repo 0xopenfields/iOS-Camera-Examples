@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Eo-vT-CJj">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LiDAR Depth View Controller-->
+        <scene sceneID="O0O-l5-9Q1">
+            <objects>
+                <viewController id="5Eo-vT-CJj" customClass="LiDARDepthViewController" customModule="iOS_Camera_Examples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2o6-Qq-c6g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lNy-xh-pqu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Disparity" translatesAutoresizingMaskIntoConstraints="NO" id="0G7-RU-Fkc">
+                                <rect key="frame" x="343" y="44" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dispality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCX-x2-stc">
+                                <rect key="frame" x="334.5" y="83.5" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mAq-Rt-U9U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mAq-Rt-U9U" firstAttribute="trailing" secondItem="0G7-RU-Fkc" secondAttribute="trailing" constant="22" id="4Zj-rs-9nF"/>
+                            <constraint firstItem="RCX-x2-stc" firstAttribute="centerX" secondItem="0G7-RU-Fkc" secondAttribute="centerX" id="6Pp-KK-XMu"/>
+                            <constraint firstItem="lNy-xh-pqu" firstAttribute="bottom" secondItem="mAq-Rt-U9U" secondAttribute="bottom" constant="34" id="A8i-wP-gU5"/>
+                            <constraint firstItem="lNy-xh-pqu" firstAttribute="leading" secondItem="mAq-Rt-U9U" secondAttribute="leading" id="EBA-MT-eDV"/>
+                            <constraint firstItem="mAq-Rt-U9U" firstAttribute="top" secondItem="lNy-xh-pqu" secondAttribute="top" constant="44" id="Kzg-RO-yjL"/>
+                            <constraint firstItem="mAq-Rt-U9U" firstAttribute="trailing" secondItem="lNy-xh-pqu" secondAttribute="trailing" id="hZ5-wy-IPC"/>
+                            <constraint firstItem="RCX-x2-stc" firstAttribute="firstBaseline" secondItem="0G7-RU-Fkc" secondAttribute="baseline" constant="24.5" symbolType="layoutAnchor" id="uBU-NC-d2W"/>
+                            <constraint firstItem="0G7-RU-Fkc" firstAttribute="top" secondItem="mAq-Rt-U9U" secondAttribute="top" id="y3p-uV-hAH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dispalitySwitch" destination="0G7-RU-Fkc" id="I1g-ZK-Rdl"/>
+                        <outlet property="imageView" destination="lNy-xh-pqu" id="3j3-DC-ur9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GtX-iC-JGP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
